@@ -1,0 +1,40 @@
+/* Grid Overlay */
+
+/* Based of simurai's gist: https://gist.github.com/simurai/845383 */
+ 
+* {
+	box-sizing: border-box;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+html:before, html:after {
+	z-index: 9999;
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	pointer-events: none;
+
+	/* change to px if you get a scrollbar */
+	width: 100%;                
+	height: 100%;
+
+	/* change grid size, you can even do non-sqaure like 20px 10px */
+	-webkit-background-size: 10% 10%;     
+	   -moz-background-size: 10% 10%;     
+	        background-size: 10% 10%;    
+}
+
+html:before {
+	background-image: -webkit-gradient( linear, 0 0, 0 100%, color-stop(.95, transparent), color-stop(.95, rgba(0,0,0,.2)) );
+	background-image: -moz-linear-gradient( 90deg, transparent 95%, rgba(0,0,0,.2) 95% );
+	background-image: linear-gradient( 90deg, transparent 95%, rgba(0,0,0,.2) 95% );
+}
+ 
+html:after {
+	background-image: -webkit-gradient( linear, 0 0, 100% 0, color-stop(.95, transparent), color-stop(.95, rgba(0,0,0,.2)) );
+	background-image: -moz-linear-gradient( 180deg, transparent 95%, rgba(0,0,0,.2) 95% );
+	background-image: linear-gradient( 180deg, transparent 95%, rgba(0,0,0,.2) 95% );
+}
