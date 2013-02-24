@@ -7,3 +7,4 @@ In some cases, CSS Grid Systems can contain unnecessary code. Additionally, grid
 
 All this provides is a flexible visual grid for potential percentage pushing to help shore up proportions instead of eyeballing everything. 
 
+Credit to: https://gist.github.com/simurai/845383
