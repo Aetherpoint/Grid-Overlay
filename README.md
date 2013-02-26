@@ -1,7 +1,7 @@
 Grid-Overlay
 ============
 
-This is fast way to overlay a flexible visual grid to check alignment and proportions. 
+This is a fast way to overlay a flexible visual grid to check alignment and proportions. 
 
 In some cases, CSS Grid Systems can contain unnecessary code. Additionally, grid systems should ideally be based off content, not imposed on a design. While standard in print design, these visual proportions often get lost on the web. Visually, a 50% width div within a 80% width container != a 50% wide div relative and proportional to the overall composition. Everytime we nest / position percentage based markup without running math, we technically break the compositional grid.
 
