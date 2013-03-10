@@ -1,7 +1,6 @@
 /* Grid Overlay - Copy These Styles */
-
 /* Based of simurai's gist: https://gist.github.com/simurai/845383 */
- 
+
 * {
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -11,19 +10,22 @@
 }
 
 html:before, html:after {
-	z-index: 9999;
-	opacity: .0;
 	content: "";
-	position: absolute;
-	top: 0;
-	right: 0;
+
+	opacity: .25; /* Grid Overlay Opacity */
+
 	pointer-events: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 9999;
 
-	/* Change to px if you get a scrollbar. */
-	width: 100%;                
+	/* Change to pixels if you get a scroll bar and don't want a flexible grid. */
 	height: 100%;
+	width: 100%;                
 
-	/* The size of the grid. */
+
+	/* Grid Sections */
 	-webkit-background-size: 10% 10%;     
 	   -moz-background-size: 10% 10%;     
 	        background-size: 10% 10%;    
@@ -39,14 +41,18 @@ html:after {
     background-image: -moz-linear-gradient( 180deg, transparent 100%, rgba(0,0,0,.1) 100% );
     background-image: linear-gradient( 180deg, transparent 100%, rgba(0,0,0,.1) 100% );
 }
-
-
-
-
 html {
 	height: 100%;
+	/*overflow: hidden;*/ /* Uncomment to hide scrollbar */
 }
-/* Page Styles - Don't Use This */
+
+
+
+
+
+
+/* Page Styles - Don't copy these styles */
+
 body {
 	font-family: monospace, Georgia, serif;
 	margin: 0;
@@ -82,7 +88,7 @@ article {
 	border: solid #fefefe 1px;
 	padding: 10%;
 	line-height: 125%;
-/*	line-height: 10%; *//* Uncomment for why Web Accessibility is important */
+	/*line-height: 10%;*/ /* Uncomment for why Web Accessibility is important */
 }
 section {
 	float: left;
